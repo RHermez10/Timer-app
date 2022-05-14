@@ -42,7 +42,7 @@ function SetTimer({min,sec}:Time){
             <h3>Seconds</h3>
         </article>
         <article>
-            <Link to="/TimerCounter">
+            <Link to="/TimerCounter" state={{minute,second}}>
       
             <button>START TIMER</button>
             </Link>
