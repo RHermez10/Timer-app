@@ -1,5 +1,5 @@
 import  { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import TimesUp from "./TimesUp";
 
 function TimerCounter(){
@@ -35,12 +35,13 @@ function TimerCounter(){
                 setSecond(0)
             }
 
-    
- 
     return(
         <section>
             {timesup ? ( <TimesUp text="timesup"/> ): 
             (<section>
+                 <Link to="/AnalogTimer" state={{minute,second}}>
+            <h3>Change to Analog timer </h3>
+            </Link>
                 {minute}:
                 {second}
                 

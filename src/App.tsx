@@ -1,6 +1,7 @@
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import AnalogTimer from './Components/AnalogTimer';
 import FirstPage from './Components/FirstPage';
 import TimerCounter from './Components/TimerCounter';
 import TimeSet from './Components/TimeSet';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/TimeSet" element={<TimeSet/>}></Route>
           <Route path="/TimerCounter" element={<TimerCounter/>}></Route>
           <Route path="/TimesUp" element={<TimesUp text="Times up"/>}></Route>
+          <Route path="/AnalogTimer" element={<AnalogTimer btn="ABORT TIME"/>}></Route>
         </Routes>
       </Router>
 
