@@ -2,6 +2,7 @@ import  { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import TimesUp from "./TimesUp";
 
+
 interface button{
     btn:string;
 }
@@ -40,13 +41,13 @@ function AnalogTimer({btn}:button){
             }
     return(
         <section>
-           {timesup ? (<TimesUp text="timesup"/>):
+           {timesup ? (<TimesUp text="Times up!"/>):
            <section>
-               <Link to="/TimerCounter" state={{minute,second}}  > 
-               <h3>Change to Digital Timer</h3>
+               <Link className="link" to="/TimerCounter" state={{minute,second}}  > 
+               <h1 className="link"> Change to Digital Timer</h1>
                </Link>
             <article>
-                  <svg className="clock" width="508" height="308" viewBox="-100 -150 508 600" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="clock" width="567" height="359" viewBox="-100 -150 508 600" fill="white" xmlns="http://www.w3.org/2000/svg">
 <g className="analogClock" clip-path="url(#clip0_839_0)">
 <path d="M139.169 11.158V0.89389" stroke="#222222" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M125.848 11.8468L124.78 1.64398" stroke="#222222" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -110,9 +111,9 @@ function AnalogTimer({btn}:button){
 <path d="M152.49 11.8622L153.559 1.6593" stroke="#222222" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 </g>
 <ellipse rx="7.98555" ry="7.9858" transform="matrix(10)" fill="black"/>
-<rect className="tick" width="3.99278" height="125.223" rx="1.99639"  transform={`rotate(${minute * 6},0,0)`} fill="black"/>
+<rect  width="3.99278" height="125.223" rx="1.99639"  transform={`rotate(${minute * 6},0,0)`} fill="black"/>
 <ellipse rx="4.98563" ry="4.98578" transform="matrix(10)" fill="#555555"/>
-<rect className="tock" width="2" height="125.223" rx="1" transform={`rotate(${second * 6},0,0) `} fill="red"/>
+<rect  width="2" height="125.223" rx="1" transform={`rotate(${second * 6},0,0) `} fill="grey"/>
 <defs>
 <clipPath id="clip0_839_0">
 <rect width="278" height="278" fill="white"/>
@@ -122,7 +123,7 @@ function AnalogTimer({btn}:button){
 
             </article>
   
-            <button onClick={stop} > {btn} </button>
+            <button className="abortTime" onClick={stop} > {btn} </button>
 
            </section>
            }

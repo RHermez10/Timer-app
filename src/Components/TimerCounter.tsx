@@ -37,16 +37,23 @@ function TimerCounter(){
 
     return(
         <section>
-            {timesup ? ( <TimesUp text="timesup"/> ): 
+            {timesup ? ( <TimesUp text="Times up!"/> ): 
             (<section>
-                 <Link to="/AnalogTimer" state={{minute,second}}>
-            <h3>Change to Analog timer </h3>
+                 <Link className="link" to="/AnalogTimer" state={{minute,second}}>
+            <h1 className="link">Change to Analog timer </h1>
             </Link>
+            <article className="time">
                 {minute}:
                 {second}
-                
-                <button onClick={stop}>ABORT TIME </button>
+       
+                <article>
+
+            
+                <button className="abortTime" onClick={stop}>ABORT TIMER </button>
+                    </article>
+                    </article>
                 </section>
+                  
                 )
             }
         

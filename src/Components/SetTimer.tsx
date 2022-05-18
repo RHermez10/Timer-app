@@ -26,25 +26,25 @@ function SetTimer({min,sec}:Time){
         setSecond(second -1)
     }
     return(
-        <section>
+        <section className="center">
 
   
-        <article>
-            <button onClick={removeMinute}>-</button>
+        <article className="flex">
+            <button className="arrow" onClick={removeMinute}>&#60;</button>
             <h2> {minute} </h2>
-            <button onClick={addMinute}>+</button>
-            <h3> minutes </h3>
+            <button className="arrow"  onClick={addMinute}> &#62;</button>
         </article>
-        <article>
-            <button onClick={removeSecond}>-</button>
+              <h3> minutes </h3>
+        <article className="flex">
+            <button className="arrow"  onClick={removeSecond}>&#60;</button>
             <h2> {second} </h2>
-            <button onClick={addSecond}>+</button>
-            <h3>Seconds</h3>
+            <button className="arrow"  onClick={addSecond}>&#62;</button>
         </article>
+         <h3>Seconds</h3>
         <article>
             <Link to="/TimerCounter" state={{minute,second}}>
       
-            <button>START TIMER</button>
+            <button className="startBTN">START TIMER</button>
             </Link>
         </article>
         </section>
