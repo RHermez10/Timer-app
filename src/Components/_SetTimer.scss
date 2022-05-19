@@ -1,0 +1,51 @@
+$btn-background: rgb(254, 254, 254);
+$btn: black;
+$lowerColor: rgb(189, 189, 189);
+
+
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+}
+
+.flex {
+    @include flex();
+}
+
+.center {
+    margin-top: 12rem;
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .arrow {
+        background-color: $btn-background;
+        color: $btn;
+        border: none;
+        font-size: 3rem;
+
+    }
+
+    h3 {
+        color: $lowerColor;
+        margin-top: -40px;
+        font-size: 20px;
+    }
+
+    .startBTN {
+        padding: 8px 53px 8px 53px;
+        font-size: 20px;
+        color: $btn;
+        border: 2px solid $btn;
+        background-color: $btn-background;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+}

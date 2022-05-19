@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import AnalogTimer from './Components/AnalogTimer';
+import FirstPage from './Components/FirstPage';
+import SetTimer from './Components/SetTimer';
+import TimerCounter from './Components/TimerCounter';
+
+import TimesUp from './Components/TimesUp';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="ConatinerForAll">
+      <Router>
+        <Routes>
+          <Route path="/" element={<FirstPage header="Intervall" text="For all your timing needs"/>}></Route>
+          <Route path="/TimeSet" element={<SetTimer min={0} sec={0} />}></Route>
+          <Route path="/TimerCounter" element={<TimerCounter/>}></Route>
+          <Route path="/TimesUp" element={<TimesUp text="Times up!"/>}></Route>
+          <Route path="/AnalogTimer" element={<AnalogTimer btn="ABORT TIMER"/>}></Route>
+        </Routes>
+      </Router>
+
+    </section>
   );
 }
 
